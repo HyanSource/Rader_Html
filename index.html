@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="js/raderjs.js"></script>
+</head>
+<style>
+canvas{
+}
+</style>
+
+<!--HTML表單 數值加上正規式-->
+
+<body onload="init()">
+    <form name='form' id='form'>
+        <span id="name_string">名字:</span>
+        <br>
+        <input type='text' name='name' id='name' />
+        <br>
+
+        <span id="ability1_string">數值1:</span>
+        <br>
+        <input type='text' name='ability1' id='ability1' oninput="value = value.replace(/[^\d]/g,'')" />
+        <br>
+
+        <span id="ability2_string">數值2:</span>
+        <br>
+        <input type='text' name='ability2' id='ability2' oninput="value = value.replace(/[^\d]/g,'')" />
+        <br>
+
+        <span id="ability3_string">數值3:</span>
+        <br>
+        <input type='text' name='ability3' id='ability3' oninput="value = value.replace(/[^\d]/g,'')" />
+        <br>
+
+        <span id="ability4_string">數值4:</span>
+        <br>
+        <input type='text' name='ability4' id='ability4' oninput="value = value.replace(/[^\d]/g,'')" />
+        <br>
+
+        <span id="ability5_string">數值5:</span>
+        <br>
+        <input type='text' name='ability5' id='ability5' oninput="value = value.replace(/[^\d]/g,'')" />
+        <br>
+
+        <input type='button' name='submit' value='送出' onclick='SetData();'>
+    </form>
+	
+    <canvas id="radercanvas" width="400" height="400"> </canvas>
+
+</form>
+
+</body>
+
+
